@@ -56,8 +56,8 @@ IsValidClient(client)
 
 public CheckCvar(QueryCookie cookie, client, ConVarQueryResult result, const char[] cvarName, const char[] cvarValue)
 {
-	if(StrEqual(cvarValue,"0")){
-		PrintToChat(client, "[ANTI-AX] Não é permitido usar cl_lagcompensation 0");
+	if(!StrEqual(cvarValue,"1")){
+		PrintToChat(client, "[ANTI-AX] Não é permitido usar cl_lagcompensation diferente de 1");
 		ForcePlayerSuicide(client);
 	}
 	
