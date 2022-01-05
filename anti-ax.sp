@@ -3,7 +3,7 @@
 #define DEBUG
  
 #define PLUGIN_AUTHOR "nesi"
-#define PLUGIN_VERSION "0.03"
+#define PLUGIN_VERSION "0.04"
  
 #include <sourcemod>
 #include <sdktools>
@@ -48,6 +48,9 @@ public void CheckCvar(QueryCookie cookie, int client, ConVarQueryResult result, 
                 PrintToChat(client, "[ANTI-AX] Não é permitido usar cl_lagcompensation diferente de 1");
                 ForcePlayerSuicide(client);
             }
+        } else {
+            PrintToChat(client, "[ANTI-AX] Não é permitido usar cl_lagcompensation diferente de 1");
+            ForcePlayerSuicide(client);
         }
     }
 }
